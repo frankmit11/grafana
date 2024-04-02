@@ -612,15 +612,17 @@
     {
       "metadata": {
         "name": "datatrails",
-        "resourceVersion": "1711130211436",
-        "creationTimestamp": "2024-03-22T17:56:51Z"
+        "resourceVersion": "1712101587199",
+        "creationTimestamp": "2024-03-22T17:56:51Z",
+        "annotations": {
+          "grafana.app/updatedTimestamp": "2024-04-02 23:46:27.199152161 +0000 UTC"
+        }
       },
       "spec": {
-        "description": "Enables the new core app datatrails",
-        "stage": "experimental",
+        "description": "Enables the new Metrics Explore core app",
+        "stage": "GA",
         "codeowner": "@grafana/dashboards-squad",
-        "frontend": true,
-        "hideFromDocs": true
+        "frontend": true
       }
     },
     {

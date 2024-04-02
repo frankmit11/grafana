@@ -528,7 +528,7 @@ const (
 	FlagFlameGraphItemCollapsing = "flameGraphItemCollapsing"
 
 	// FlagDatatrails
-	// Enables the new core app datatrails
+	// Enables the new Metrics Explore core app
 	FlagDatatrails = "datatrails"
 
 	// FlagAlertingSimplifiedRouting
