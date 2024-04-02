@@ -11,6 +11,7 @@ import (
 	"os"
 	"path/filepath"
 	"testing"
+	"time"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -162,6 +163,9 @@ providers:
 		Password:       "admin",
 		Login:          "admin",
 	})
+
+	// give provisioner some time to load dashboards
+	time.Sleep(1 * time.Second)
 
 	type errorResponseBody struct {
 		Message string `json:"message"`
