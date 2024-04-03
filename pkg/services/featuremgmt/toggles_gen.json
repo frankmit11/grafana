@@ -614,12 +614,13 @@
         "name": "datatrails",
         "resourceVersion": "1712101587199",
         "creationTimestamp": "2024-03-22T17:56:51Z",
+        "deletionTimestamp": "2024-04-03T13:34:42Z",
         "annotations": {
           "grafana.app/updatedTimestamp": "2024-04-02 23:46:27.199152161 +0000 UTC"
         }
       },
       "spec": {
-        "description": "Enables the new Metrics Explore core app",
+        "description": "Enables the new core app datatrails",
         "stage": "GA",
         "codeowner": "@grafana/dashboards-squad",
         "frontend": true
@@ -2079,6 +2080,20 @@
         "codeowner": "@grafana/identity-access-team",
         "hideFromAdminPage": true,
         "hideFromDocs": true
+      }
+    },
+    {
+      "metadata": {
+        "name": "exploreMetrics",
+        "resourceVersion": "1712150658916",
+        "creationTimestamp": "2024-04-03T13:24:18Z",
+        "deletionTimestamp": "2024-04-03T13:27:44Z"
+      },
+      "spec": {
+        "description": "Enables the new Explore Metrics core app",
+        "stage": "GA",
+        "codeowner": "@grafana/dashboards-squad",
+        "frontend": true
       }
     }
   ]
