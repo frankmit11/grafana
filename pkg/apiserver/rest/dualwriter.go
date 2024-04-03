@@ -74,8 +74,9 @@ const (
 	Mode4
 )
 
-// #TODO make CurrentMode customisable and specific to each entity
 var CurrentMode = Mode2
+
+// #TODO make CurrentMode customisable and specific to each entity
 
 // newDualWriter returns a new DualWriter.
 func newDualWriter(legacy LegacyStorage, storage Storage) *DualWriter {
