@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-ARG BASE_IMAGE=quayreg1.fpet.pokprv.stglabs.ibm.com/fmitaro/alpine:3.19.1
+ARG BASE_IMAGE=quayreg1.fpet.pokprv.stglabs.ibm.com/fmitaro/alpine:v3.19.1
 ARG JS_IMAGE=quayreg1.fpet.pokprv.stglabs.ibm.com/fmitaro/node:20-alpine
 ARG JS_PLATFORM=linux/s390x
 ARG GO_IMAGE=quayreg1.fpet.pokprv.stglabs.ibm.com/fmitaro/golang:1.21.8-alpine
