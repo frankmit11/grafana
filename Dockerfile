@@ -99,6 +99,7 @@ LABEL maintainer="Grafana Labs <hello@grafana.com>"
 
 ARG GF_UID="472"
 ARG GF_GID="0"
+ARG LDAP_CERT
 
 ENV PATH="/usr/share/grafana/bin:$PATH" \
     GF_PATHS_CONFIG="/etc/grafana/grafana.ini" \
@@ -179,6 +180,9 @@ EXPOSE 3000
 ARG RUN_SH=./packaging/docker/run.sh
 
 COPY ${RUN_SH} /run.sh
+
+COPY ${LDAP_CERT} /etc/grafana/root_ca.crt
+
 
 USER "$GF_UID"
 ENTRYPOINT [ "/run.sh" ]
