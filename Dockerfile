@@ -1,9 +1,9 @@
 # syntax=docker/dockerfile:1
 
-ARG BASE_IMAGE=quayreg1.fpet.pokprv.stglabs.ibm.com/fmitaro/alpine:v3.19.1
-ARG JS_IMAGE=quayreg1.fpet.pokprv.stglabs.ibm.com/fmitaro/node:20-alpine
+ARG BASE_IMAGE=quayreg1.fpet.pokprv.stglabs.ibm.com/hcit-performance-monitoring/alpine:v3.19.1
+ARG JS_IMAGE=quayreg1.fpet.pokprv.stglabs.ibm.com/hcit-performance-monitoring/node:20-alpine
 ARG JS_PLATFORM=linux/s390x
-ARG GO_IMAGE=quayreg1.fpet.pokprv.stglabs.ibm.com/fmitaro/golang:1.21.8-alpine
+ARG GO_IMAGE=quayreg1.fpet.pokprv.stglabs.ibm.com/hcit-performance-monitoring/golang:1.21.8-alpine
 
 ARG GO_SRC=go-builder
 ARG JS_SRC=js-builder
