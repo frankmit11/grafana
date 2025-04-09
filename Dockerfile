@@ -28,7 +28,7 @@ COPY LICENSE ./
 COPY conf/defaults.ini ./conf/defaults.ini
 COPY e2e e2e
 
-RUN apk add --no-cache make build-base python3
+RUN apk add --no-cache make build-base python3 py-setuptools
 
 RUN yarn install --immutable
 
@@ -37,6 +37,7 @@ COPY scripts scripts
 COPY emails emails
 
 ENV NODE_ENV=production
+ENV NX_DISABLE_DB=true
 RUN yarn build
 
 # Golang build stage
