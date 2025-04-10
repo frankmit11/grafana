@@ -33,7 +33,6 @@ COPY scripts scripts
 COPY emails emails
 
 ENV NODE_ENV=production
-ENV NX_DISABLE_DB=true
 RUN yarn build
 
 # Golang build stage
