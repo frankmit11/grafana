@@ -21,6 +21,7 @@ COPY .yarn .yarn
 COPY packages packages
 COPY public public
 COPY LICENSE ./
+COPY lerna.json lerna.json
 COPY conf/defaults.ini ./conf/defaults.ini
 COPY e2e e2e
 
@@ -46,7 +47,7 @@ ARG BINGO="true"
 
 # Install build dependencies
 RUN if grep -i -q alpine /etc/issue; then \
-      apk add --no-cache gcc g++ make git; \
+      apk add --no-cache bash gcc g++ make git; \
     fi
 
 WORKDIR /tmp/grafana
