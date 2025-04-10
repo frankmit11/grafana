@@ -16,7 +16,7 @@ ENV NODE_OPTIONS=--max_old_space_size=8000
 
 WORKDIR /tmp/grafana
 
-COPY package.json project.json nx.json yarn.lock .yarnrc.yml ./
+COPY package.json project.json .yarnrc.yml ./
 COPY .yarn .yarn
 COPY packages packages
 COPY public public
@@ -24,16 +24,15 @@ COPY LICENSE ./
 COPY conf/defaults.ini ./conf/defaults.ini
 COPY e2e e2e
 
-RUN apk add --no-cache make build-base python3 py3-setuptools
+RUN apk add --no-cache make build-base python3 py3-setuptools git
 
-RUN yarn install --immutable
+RUN yarn
 
 COPY tsconfig.json eslint.config.js .editorconfig .browserslistrc .prettierrc.js ./
 COPY scripts scripts
 COPY emails emails
 
 ENV NODE_ENV=production
-ENV NX_DISABLE_DB=true
 RUN yarn build
 
 # Golang build stage
